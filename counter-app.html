@@ -1,0 +1,27 @@
+<!-- 
+    Note: 
+	The JavaScript will execute before any HTML. This typically causes issues since the HTML elements you select with JavaScript will be undefined because the browser reads HTML code from top to bottom. We'll use the defer attribute of the script element to correct that, which instructs the browser to load HTML first before running JavaScript code.
+-->
+ 
+
+<!DOCType html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+	<script defer src="counter.js" type="text/javascript"></script>
+	<title>Counter</title>
+</head>
+<body>
+	<div class="counter-container" id="addAndSubtract">
+		<button id="subtract">-</button>
+        <span id="output">0</span>
+        <button id="add">+</button>	
+	</div>
+</body>
+</html>
